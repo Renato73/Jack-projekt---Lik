@@ -1,0 +1,67 @@
+class Likanimacija
+{
+    field Lik lik;
+    field int dir;
+    
+
+    constructor Likanimacija new(){
+        let lik = Lik.new(200,200);
+        let dir=0;
+        return this;
+    }
+
+    method void dispose()
+    {
+        do Lik.dispose();
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+    method void kretanje(){
+        var int key;
+        var boolean exit;
+        var int n, a, provjera,c;
+        let exit=false;
+        let a = 0;
+        let key=0;
+        let n =5;
+        let provjera =0;
+        let c =5;
+        
+
+        while(~exit){
+            
+            while(key=0){
+            
+                let key=Keyboard.keyPressed();
+                     
+                if(~(key=0)){let a=key;}
+
+                let key = provjera;
+                if(a=131){let n= lik.jump(a);}// jump
+                if(a=88){do lik.reset();}//reset
+                if(a=129){let n=lik.crtanje();} //crtanje
+                if(a=134){let n=lik.leti(a);}//let
+                if(a=130){let n=lik.pucanje();}//pucanje
+                if(a=140){do lik.crtanje();
+                        let c=c+1;
+                        do Sys.wait(9999);}
+                if(~(n=0)){let key=n;}
+               
+                        
+                
+                if (~(key=0)){
+                    if(key>0){let provjera=key;}}
+                
+                let key = 0;
+                
+                
+            }
+            
+            
+    }
+    
+       return; 
+    }
+}

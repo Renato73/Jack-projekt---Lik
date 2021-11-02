@@ -1,0 +1,15 @@
+class Main
+{
+    function void main()
+    { 
+
+
+        var Likanimacija lik;
+        let lik=Likanimacija.new();
+        do lik.kretanje();
+        do game.dispose();
+        return;
+
+        
+    }
+}
